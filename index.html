@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your Room - Find det perfekte møbel til dit hjem">
+    <title>Your Room - Hjem</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    
+    <!-- Header og navigation -->
+    <header class="main-header">
+        <div class="header-container">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html">HOME</a>
+            </div>
+            
+            <!-- Søgefelt -->
+            <div class="search-bar">
+                <input type="search" placeholder="Search..." aria-label="Søg efter produkter">
+            </div>
+            
+            <!-- Indkøbskurv -->
+            <div class="cart-icon">
+                <a href="#" aria-label="Indkøbskurv">
+                    <img src="assets/images/shoppingcart.png" alt="Shopping cart">
+                </a>
+            </div>
+        </div>
+        
+        <!-- Navigation menu -->
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html" class="active">INSPIRATION</a></li>
+                <li><a href="livingroom.html">LIVING ROOM</a></li>
+                <li><a href="bedroom.html">BEDROOM</a></li>
+                <li><a href="kitchen.html">KITCHEN</a></li>
+                <li><a href="bathroom.html">BATHROOM</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Hero sektion -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>YOUR ROOM</h1>
+        </div>
+    </section>
+    
+    <!-- Kategori-cirkler -->
+    <section class="categories">
+        <div class="categories-container">
+            <!-- Living Room -->
+            <div class="category-card" data-category="furniture">
+                <a href="livingroom.html">
+                    <div class="category-icon">
+                        <!-- Billede hentes fra API via JavaScript -->
+                    </div>
+                    <h3 class="discount-text"><!-- Rabat hentes fra API --></h3>
+                    <p>LIVING ROOM</p>
+                </a>
+            </div>
+            
+            <!-- Bedroom -->
+            <div class="category-card" data-category="furniture">
+                <a href="bedroom.html">
+                    <div class="category-icon">
+                        <!-- Billede hentes fra API via JavaScript -->
+                    </div>
+                    <h3 class="discount-text"><!-- Rabat hentes fra API --></h3>
+                    <p>BEDROOM</p>
+                </a>
+            </div>
+            
+            <!-- Kitchen -->
+            <div class="category-card" data-category="kitchen-accessories">
+                <a href="kitchen.html">
+                    <div class="category-icon">
+                        <!-- Billede hentes fra API via JavaScript -->
+                    </div>
+                    <h3 class="discount-text"><!-- Rabat hentes fra API --></h3>
+                    <p>KITCHEN</p>
+                </a>
+            </div>
+            
+            <!-- Bathroom -->
+            <div class="category-card" data-category="furniture">
+                <a href="bathroom.html">
+                    <div class="category-icon">
+                        <!-- Billede hentes fra API via JavaScript -->
+                    </div>
+                    <h3 class="discount-text"><!-- Rabat hentes fra API --></h3>
+                    <p>BATHROOM</p>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Inspiration sektion -->
+    <section class="inspiration">
+        <h2>INSPIRATION</h2>
+        
+        <div class="articles-container">
+            <!-- Artikel 1 -->
+            <article class="article-card">
+                <img src="assets/images/article1.jpg" alt="Interior design tips">
+                <div class="article-content">
+                    <h3>The best tips with interior design expert Caroline Smith</h3>
+                    <button class="article-btn">Read the article</button>
+                </div>
+            </article>
+            
+            <!-- Artikel 2 -->
+            <article class="article-card">
+                <div class="article-content">
+                    <h3>How to create cosiness in your kitchen using plants</h3>
+                    <button class="article-btn">Read the article</button>
+                </div>
+                <img src="assets/images/article2.jpg" alt="Kitchen with plants">
+            </article>
+            
+            <!-- Artikel 3 -->
+            <article class="article-card">
+                <img src="assets/images/article3.jpg" alt="Bathroom atmosphere">
+                <div class="article-content">
+                    <h3>Create a spa atmosphere in your bathroom</h3>
+                    <button class="article-btn">Read the article</button>
+                </div>
+            </article>
+        </div>
+    </section>
+    
+    <!-- Footer kommer her -->
+    
+    <script src="scripts/main.js"></script>
+</body>
+</html>
