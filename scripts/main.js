@@ -41,29 +41,20 @@ async function populateCategories() {
         if (products.length > 0) {
             let selectedProduct = products[0]; // Default
             
-            // Vælg specifikke produkter baseret på kategori-navn
+            
             if (categoryName === 'LIVING ROOM') {
-                // Brug index 1 for stol
+        
                 selectedProduct = products[1] || products[0];
             } else if (categoryName === 'BEDROOM') {
-                // Find "Annibale Colombo" seng - søg med lowercase for at være sikker
-                selectedProduct = products.find(p => 
+            
+                const furnitureProducts = await fetchProductsByCategory('furniture');
+                selectedProduct = furnitureProducts.find(p => 
                     p.title.toLowerCase().includes('annibale') || 
-                    p.title.toLowerCase().includes('colombo')
-                ) || products[0];
-                
-                // Hvis ikke fundet, prøv furniture kategorien
-                if (!selectedProduct || selectedProduct === products[0]) {
-                    const furnitureProducts = await fetchProductsByCategory('furniture');
-                    selectedProduct = furnitureProducts.find(p => 
-                        p.title.toLowerCase().includes('annibale') || 
-                        p.title.toLowerCase().includes('colombo') ||
-                        p.title.toLowerCase().includes('bed')
-                    ) || furnitureProducts[0];
-                }
+                    p.title.toLowerCase().includes('colombo') ||
+                    p.title.toLowerCase().includes('bed')
+                ) || furnitureProducts[0];
             } else if (categoryName === 'BATHROOM') {
-                // Skift til en anden kategori der passer bedre til bathroom
-                // Prøv "skin-care" kategori i stedet
+              
                 const bathroomProducts = await fetchProductsByCategory('skin-care');
                 selectedProduct = bathroomProducts[0] || products[0];
             } else {
