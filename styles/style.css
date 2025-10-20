@@ -7,12 +7,13 @@
 
 body {
     font-family: Arial, sans-serif;
+    background-color: #FBF4E7;
 }
 
 /* Header styling */
 .main-header {
     background-color: #595C42;
-    padding: 2rem 2rem;
+    padding: 2rem 2rem 0;
     margin-bottom: 0;
 }
 
@@ -73,6 +74,7 @@ body {
     width: 100vw;
     margin-left: calc(-50vw + 50%);
     margin-top: 3rem;
+    margin-bottom: 0;
 }
 
 .main-nav ul {
@@ -96,6 +98,29 @@ body {
     opacity: 0.7;
 }
 
-.main-nav a.active {
+/* Hero sektion styling */
+.hero {
+    background-image: 
+        linear-gradient(to bottom, 
+            rgba(75, 46, 30, 0.70) 90%, 
+            rgba(0, 0, 0, 0.5) 100%),
+        url('../assets/images/frontpage.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-content h1 {
+    color: #fff;
+    font-size: 4rem;
     font-weight: bold;
+    text-align: center;
+    letter-spacing: 0.3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
