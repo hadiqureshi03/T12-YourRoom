@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Living Room - Find det perfekte møbel til din stue">
-    <title>Living Room - Your Room</title>
+    <meta name="description" content="Produktdetaljer - Your Room">
+    <title>Produkt - Your Room</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
@@ -41,7 +41,7 @@
         <nav class="main-nav">
             <ul>
                 <li><a href="index.html">INSPIRATION</a></li>
-                <li><a href="livingroom.html" class="active">LIVING ROOM</a></li>
+                <li><a href="livingroom.html">LIVING ROOM</a></li>
                 <li><a href="bedroom.html">BEDROOM</a></li>
                 <li><a href="kitchen.html">KITCHEN</a></li>
                 <li><a href="bathroom.html">BATHROOM</a></li>
@@ -49,74 +49,44 @@
         </nav>
     </header>
 
-    <!-- Orange banner -->
-    <section class="category-banner">
-        <div class="banner-content">
-            <p>CREATE A COZY AND STYLISH ATMOSPHERE WITH OUR WIDE SELECTION OF FURNITURE. DISCOVER DESIGNS THAT BRING COMFORT AND CHARACTER TO YOUR HOME.</p>
-        </div>
-    </section>
-
-    <!-- Produkter sektion -->
-    <section class="products">
-        <div class="products-container" id="products-grid">
-            <!-- Dummy produkt 1 -->
-            <div class="product-card">
-                <a href="product-detail.html">
-                    <div class="product-image">
-                        <!-- Billede kommer her -->
+    <!-- Produkt detaljer -->
+    <section class="product-detail">
+        <div class="product-detail-container">
+            <!-- Venstre side - Billeder -->
+            <div class="product-images">
+                <!-- Hovedbillede -->
+                <div class="main-image">
+                    <div class="image-circle">
+                        <!-- Billede indsættes via JavaScript -->
                     </div>
-                    <h3>Produktnavn</h3>
-                    <p class="product-price">Pris</p>
-                    <button class="product-btn">Read more</button>
-                </a>
+                </div>
+                
+                <!-- Thumbnail billeder -->
+                <div class="thumbnail-images">
+                    <button class="thumbnail-btn prev" aria-label="Forrige billede">
+                        <span>&#8249;</span>
+                    </button>
+                    <div class="thumbnails">
+                        <!-- Thumbnails indsættes via JavaScript -->
+                    </div>
+                    <button class="thumbnail-btn next" aria-label="Næste billede">
+                        <span>&#8250;</span>
+                    </button>
+                </div>
             </div>
-
-            <!-- Dummy produkt 2 -->
-            <div class="product-card">
-                <a href="product-detail.html">
-                    <div class="product-image">
-                        <!-- Billede kommer her -->
-                    </div>
-                    <h3>Produktnavn</h3>
-                    <p class="product-price">Pris</p>
-                    <button class="product-btn">Read more</button>
-                </a>
-            </div>
-
-            <!-- Dummy produkt 3 -->
-            <div class="product-card">
-                <a href="product-detail.html">
-                    <div class="product-image">
-                        <!-- Billede kommer her -->
-                    </div>
-                    <h3>Produktnavn</h3>
-                    <p class="product-price">Pris</p>
-                    <button class="product-btn">Read more</button>
-                </a>
-            </div>
-
-            <!-- Dummy produkt 4 -->
-            <div class="product-card">
-                <a href="product-detail.html">
-                    <div class="product-image">
-                        <!-- Billede kommer her -->
-                    </div>
-                    <h3>Produktnavn</h3>
-                    <p class="product-price">Pris</p>
-                    <button class="product-btn">Read more</button>
-                </a>
-            </div>
-
-            <!-- Dummy produkt 5 -->
-            <div class="product-card">
-                <a href="product-detail.html">
-                    <div class="product-image">
-                        <!-- Billede kommer her -->
-                    </div>
-                    <h3>Produktnavn</h3>
-                    <p class="product-price">Pris</p>
-                    <button class="product-btn">Read more</button>
-                </a>
+            
+            <!-- Højre side - Info -->
+            <div class="product-info">
+                <h1 id="product-title">Produktnavn</h1>
+                <p class="product-sku">SKU: <span id="product-sku">12345</span></p>
+                
+                <div class="product-description">
+                    <p id="product-desc">Produktbeskrivelse kommer her...</p>
+                </div>
+                
+                <p class="product-price-detail" id="product-price">0,00 kr</p>
+                
+                <button class="buy-btn">Køb</button>
             </div>
         </div>
     </section>
@@ -156,6 +126,6 @@
         </div>
     </footer>
     
-    <script src="scripts/category.js"></script>
+    <script src="scripts/product-detail.js"></script>
 </body>
 </html>

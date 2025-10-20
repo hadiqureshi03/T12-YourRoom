@@ -399,6 +399,12 @@ body {
     transition: transform 0.3s;
 }
 
+.product-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
 .product-card:hover {
     transform: translateY(-5px);
 }
@@ -445,6 +451,149 @@ body {
 }
 
 .product-btn:hover {
+    opacity: 0.8;
+}
+
+/* Product Detail Side */
+.product-detail {
+    padding: 4rem 2rem;
+    background-color: #FBF4E7;
+}
+
+.product-detail-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+/* Venstre side - Billeder */
+.product-images {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.main-image {
+    display: flex;
+    justify-content: center;
+}
+
+.image-circle {
+    width: 400px;
+    height: 400px;
+    background-color: #ECB674;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.image-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Thumbnail billeder */
+.thumbnail-images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.thumbnails {
+    display: flex;
+    gap: 1rem;
+}
+
+.thumbnail {
+    width: 80px;
+    height: 80px;
+    background-color: #ECB674;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.thumbnail:hover,
+.thumbnail.active {
+    border-color: #595C42;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.thumbnail-btn {
+    background-color: #595C42;
+    color: #fff;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s;
+}
+
+.thumbnail-btn:hover {
+    opacity: 0.8;
+}
+
+/* Højre side - Info */
+.product-info {
+    padding: 2rem 0;
+}
+
+.product-info h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #000;
+}
+
+.product-sku {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+.product-description {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.product-price-detail {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 2rem;
+}
+
+.buy-btn {
+    background-color: #595C42;
+    color: #fff;
+    border: none;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: opacity 0.3s;
+}
+
+.buy-btn:hover {
     opacity: 0.8;
 }
 
