@@ -1,0 +1,101 @@
+/* Reset og generelle styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header styling */
+.main-header {
+    background-color: #595C42;
+    padding: 2rem 2rem;
+    margin-bottom: 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 3rem;
+    position: relative;
+}
+
+/* Skjul logo for nu */
+.logo {
+    display: none;
+}
+
+/* Søgefelt styling - centreret */
+.search-bar {
+    flex-grow: 1;
+    max-width: 700px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #fff;
+    font-size: 1rem;
+}
+
+.search-bar input::placeholder {
+    color: #999;
+}
+
+/* Indkøbskurv styling - absolut position til højre */
+.cart-icon {
+    position: absolute;
+    right: 0;
+}
+
+.cart-icon a {
+    display: flex;
+    align-items: center;
+}
+
+.cart-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Navigation styling - fylder hele skærmen */
+.main-nav {
+    background-color: #FBF4E7;
+    padding: 1.5rem 0;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-top: 3rem;
+}
+
+.main-nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    list-style: none;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    transition: opacity 0.3s;
+}
+
+.main-nav a:hover {
+    opacity: 0.7;
+}
+
+.main-nav a.active {
+    font-weight: bold;
+}
