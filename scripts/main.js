@@ -53,7 +53,30 @@ async function populateCategories() {
     }
 }
 
-// Kør funktionen når siden er loaded
+// Burger menu funktionalitet
+function initBurgerMenu() {
+    const burgerMenu = document.querySelector('.burger-menu');
+    const mainNav = document.querySelector('.main-nav');
+    
+    if (burgerMenu && mainNav) {
+        burgerMenu.addEventListener('click', () => {
+            burgerMenu.classList.toggle('active');
+            mainNav.classList.toggle('active');
+        });
+        
+        // Luk menu når der klikkes på et link
+        const navLinks = mainNav.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                burgerMenu.classList.remove('active');
+                mainNav.classList.remove('active');
+            });
+        });
+    }
+}
+
+// Kør funktioner når siden er loaded
 document.addEventListener('DOMContentLoaded', () => {
     populateCategories();
+    initBurgerMenu();
 });

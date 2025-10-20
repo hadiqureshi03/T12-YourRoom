@@ -12,6 +12,13 @@
     <!-- Header og navigation -->
     <header class="main-header">
         <div class="header-container">
+            <!-- Burger menu (kun mobil) -->
+            <button class="burger-menu" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
             <!-- Logo -->
             <div class="logo">
                 <a href="index.html">HOME</a>
@@ -132,7 +139,40 @@
         </div>
     </section>
     
-    <!-- Footer kommer her -->
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Newsletter sektion -->
+            <div class="newsletter">
+                <h2>Tilmeld dig vores Nyhedsbrev</h2>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Mailadresse" required>
+                    <input type="text" placeholder="Fornavn" required>
+                    <button type="submit">Tilmeld</button>
+                </form>
+            </div>
+            
+            <!-- Footer links -->
+            <div class="footer-links">
+                <div class="footer-column">
+                    <a href="#">About us</a>
+                </div>
+                <div class="footer-column">
+                    <a href="#">Contact</a>
+                </div>
+                <div class="footer-column">
+                    <a href="#">Terms and Conditions</a>
+                </div>
+            </div>
+            
+            <!-- Social media -->
+            <div class="social-media">
+                <a href="#" aria-label="YouTube"><img src="assets/images/yt.png" alt="YouTube"></a>
+                <a href="#" aria-label="Twitter"><img src="assets/images/twitter.png" alt="Twitter"></a>
+                <a href="#" aria-label="Instagram"><img src="assets/images/ig.png" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
     
     <script src="scripts/main.js"></script>
 </body>
