@@ -41,12 +41,10 @@ async function populateCategories() {
         if (products.length > 0) {
             let selectedProduct = products[0]; // Default
             
-            
+            // Vælg specifikke produkter baseret på kategori-navn
             if (categoryName === 'LIVING ROOM') {
-        
                 selectedProduct = products[1] || products[0];
             } else if (categoryName === 'BEDROOM') {
-            
                 const furnitureProducts = await fetchProductsByCategory('furniture');
                 selectedProduct = furnitureProducts.find(p => 
                     p.title.toLowerCase().includes('annibale') || 
@@ -77,12 +75,22 @@ async function populateCategories() {
 function initBurgerMenu() {
     const burgerMenu = document.querySelector('.burger-menu');
     const mainNav = document.querySelector('.main-nav');
+    const closeMenuBtn = document.querySelector('.close-menu-btn');
     
     if (burgerMenu && mainNav) {
+        // Åbn/luk med burger menu
         burgerMenu.addEventListener('click', () => {
             burgerMenu.classList.toggle('active');
             mainNav.classList.toggle('active');
         });
+        
+        // Luk med X knap
+        if (closeMenuBtn) {
+            closeMenuBtn.addEventListener('click', () => {
+                burgerMenu.classList.remove('active');
+                mainNav.classList.remove('active');
+            });
+        }
         
         // Luk menu når der klikkes på et link
         const navLinks = mainNav.querySelectorAll('a');
