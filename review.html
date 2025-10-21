@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Write a review - Your Room">
+    <title>Write a Review - Your Room</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    
+    <!-- Header og navigation -->
+    <header class="main-header">
+        <div class="header-container">
+            <!-- Burger menu (kun mobil) -->
+            <button class="burger-menu" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/logo.JPEG" alt="Your Room Logo">
+                </a>
+            </div>
+            
+            <!-- Søgefelt -->
+            <div class="search-bar">
+                <input type="search" placeholder="Search..." aria-label="Search for products">
+            </div>
+            
+            <!-- Indkøbskurv -->
+            <div class="cart-icon">
+                <a href="#" aria-label="Shopping cart">
+                    <img src="assets/images/shoppingcart.png" alt="Shopping cart">
+                </a>
+            </div>
+        </div>
+        
+        <!-- Navigation menu -->
+        <nav class="main-nav">
+            <!-- Luk knap -->
+            <button class="close-menu-btn" aria-label="Close menu">
+                <span>&times;</span>
+            </button>
+            
+            <ul>
+                <li><a href="index.html">INSPIRATION</a></li>
+                <li><a href="livingroom.html">LIVING ROOM</a></li>
+                <li><a href="bedroom.html">BEDROOM</a></li>
+                <li><a href="kitchen.html">KITCHEN</a></li>
+                <li><a href="bathroom.html">BATHROOM</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Review Hero Banner -->
+    <section class="review-hero">
+        <h1>REVIEWS</h1>
+    </section>
+
+    <!-- Review Form -->
+    <section class="review-form-section">
+        <div class="review-form-container">
+            <form class="review-form" id="reviewForm">
+                <div class="form-group">
+                    <label for="review-title">Title</label>
+                    <input type="text" id="review-title" name="title" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="review-name">Name</label>
+                    <input type="text" id="review-name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="review-email">Email</label>
+                    <input type="email" id="review-email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="review-text">Review</label>
+                    <textarea id="review-text" name="review" rows="8" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Newsletter sektion -->
+            <div class="newsletter">
+                <h2>Subscribe to our Newsletter</h2>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Email address" required>
+                    <input type="text" placeholder="First name" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+            
+            <!-- Footer links -->
+            <div class="footer-links">
+                <div class="footer-column">
+                    <a href="#">About us</a>
+                </div>
+                <div class="footer-column">
+                    <a href="#">Contact</a>
+                </div>
+                <div class="footer-column">
+                    <a href="#">Terms and Conditions</a>
+                </div>
+            </div>
+            
+            <!-- Social media -->
+            <div class="social-media">
+                <a href="#" aria-label="YouTube"><img src="assets/images/yt.png" alt="YouTube"></a>
+                <a href="#" aria-label="Twitter"><img src="assets/images/twitter.png" alt="Twitter"></a>
+                <a href="#" aria-label="Instagram"><img src="assets/images/ig.png" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="scripts/review.js"></script>
+</body>
+</html>
