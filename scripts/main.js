@@ -54,7 +54,6 @@ async function populateCategories() {
                     p.title.toLowerCase().includes('bed')
                 ) || furnitureProducts[0];
             } else if (categoryName === 'BATHROOM') {
-              
                 const bathroomProducts = await fetchProductsByCategory('skin-care');
                 selectedProduct = bathroomProducts[0] || products[0];
             } else {
