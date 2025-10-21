@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Produktdetaljer - Your Room">
-    <title>Produkt - Your Room</title>
+    <meta name="description" content="Write a review - Your Room">
+    <title>Write a Review - Your Room</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
@@ -21,19 +21,19 @@
             
             <!-- Logo -->
             <div class="logo">
-         <a href="index.html">
-        <img src="assets/images/logo.JPEG" alt="Your Room Logo">
-          </a>
-            </div> 
+                <a href="index.html">
+                    <img src="assets/images/logo.JPEG" alt="Your Room Logo">
+                </a>
+            </div>
             
             <!-- Søgefelt -->
             <div class="search-bar">
-                <input type="search" placeholder="Search..." aria-label="Søg efter produkter">
+                <input type="search" placeholder="Search..." aria-label="Search for products">
             </div>
             
             <!-- Indkøbskurv -->
             <div class="cart-icon">
-                <a href="#" aria-label="Indkøbskurv">
+                <a href="#" aria-label="Shopping cart">
                     <img src="assets/images/shoppingcart.png" alt="Shopping cart">
                 </a>
             </div>
@@ -42,7 +42,7 @@
         <!-- Navigation menu -->
         <nav class="main-nav">
             <!-- Luk knap -->
-            <button class="close-menu-btn" onclick="document.querySelector('.burger-menu').click()">
+            <button class="close-menu-btn" aria-label="Close menu">
                 <span>&times;</span>
             </button>
             
@@ -56,53 +56,37 @@
         </nav>
     </header>
 
-    <!-- Produkt detaljer -->
-    <section class="product-detail">
-        <!-- Tilbage knap -->
-        <button class="back-btn" onclick="history.back()" aria-label="Gå tilbage">
-            <span>&#8592;</span> Back
-        </button>
-        
-        <div class="product-detail-container">
-            <!-- Venstre side - Billeder -->
-            <div class="product-images">
-                <!-- Hovedbillede -->
-                <div class="main-image">
-                    <div class="image-circle">
-                        <!-- Billede indsættes via JavaScript -->
-                    </div>
+    <!-- Review Hero Banner -->
+    <section class="review-hero">
+        <h1>REVIEWS</h1>
+    </section>
+
+    <!-- Review Form -->
+    <section class="review-form-section">
+        <div class="review-form-container">
+            <form class="review-form" id="reviewForm">
+                <div class="form-group">
+                    <label for="review-title">Title</label>
+                    <input type="text" id="review-title" name="title" required>
                 </div>
                 
-                <!-- Thumbnail billeder -->
-                <div class="thumbnail-images">
-                    <button class="thumbnail-btn prev" aria-label="Forrige billede">
-                        <span>&#8249;</span>
-                    </button>
-                    <div class="thumbnails">
-                        <!-- Thumbnails indsættes via JavaScript -->
-                    </div>
-                    <button class="thumbnail-btn next" aria-label="Næste billede">
-                        <span>&#8250;</span>
-                    </button>
-                </div>
-            </div>
-            
-            <!-- Højre side - Info -->
-            <div class="product-info">
-                <h1 id="product-title">Produktnavn</h1>
-                <p class="product-sku">SKU: <span id="product-sku">12345</span></p>
-                
-                <div class="product-description">
-                    <p id="product-desc">Produktbeskrivelse kommer her...</p>
+                <div class="form-group">
+                    <label for="review-name">Name</label>
+                    <input type="text" id="review-name" name="name" required>
                 </div>
                 
-                <p class="product-price-detail" id="product-price">0,00 kr</p>
-                
-                <div class="product-actions">
-                    <button class="buy-btn">Buy</button>
-                    <a href="review.html" class="review-link-btn">Write a Review</a>
+                <div class="form-group">
+                    <label for="review-email">Email</label>
+                    <input type="email" id="review-email" name="email" required>
                 </div>
-            </div>
+                
+                <div class="form-group">
+                    <label for="review-text">Review</label>
+                    <textarea id="review-text" name="review" rows="8" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
         </div>
     </section>
 
@@ -111,11 +95,11 @@
         <div class="footer-content">
             <!-- Newsletter sektion -->
             <div class="newsletter">
-                <h2>Tilmeld dig vores Nyhedsbrev</h2>
+                <h2>Subscribe to our Newsletter</h2>
                 <form class="newsletter-form">
-                    <input type="email" placeholder="Mailadresse" required>
-                    <input type="text" placeholder="Fornavn" required>
-                    <button type="submit">Tilmeld</button>
+                    <input type="email" placeholder="Email address" required>
+                    <input type="text" placeholder="First name" required>
+                    <button type="submit">Subscribe</button>
                 </form>
             </div>
             
@@ -141,6 +125,6 @@
         </div>
     </footer>
     
-    <script src="scripts/product-detail.js"></script>
+    <script src="scripts/review.js"></script>
 </body>
 </html>
