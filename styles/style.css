@@ -33,10 +33,25 @@ h1, h2, h3 {
     margin: 0 auto;
     gap: 3rem;
     position: relative;
+    padding: 0 80px;
 }
 
+/* Logo styling */
 .logo {
-    display: none;
+    display: block;
+    position: absolute;
+    left: 0;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 35px;
+    width: auto;
+    object-fit: contain;
 }
 
 /* Burger menu - skjult på desktop */
@@ -647,29 +662,165 @@ h1, h2, h3 {
     opacity: 0.8;
 }
 
-/* Responsive Design - Mobile First */
-@media (max-width: 768px) {
-    /* Header */
-    .header-container {
-        gap: 1rem;
-        padding: 0 1rem;
+.product-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.review-link-btn {
+    background-color: #ECB674;
+    color: #000;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: opacity 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.review-link-btn:hover {
+    opacity: 0.8;
+}
+
+/* Review Side */
+.review-hero {
+    background-image: url('../assets/images/frontpage.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.review-hero h1 {
+    color: #fff;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.review-form-section {
+    padding: 4rem 2rem;
+    background-color: #FBF4E7;
+}
+
+.review-form-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.review-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 500;
+    color: #000;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: #B8D78D;
+    color: #000;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: opacity 0.3s;
+    align-self: flex-end;
+}
+
+.submit-btn:hover {
+    opacity: 0.8;
+}
+
+/* Responsive Design - Burger menu og responsive layout */
+@media (max-width: 992px) {
+    /* Header mindre padding */
+    .main-header {
+        padding: 1rem 1rem 0;
     }
     
-    /* Vis burger menu på mobil */
+    /* Header bliver flexbox med wrap */
+    .header-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 1rem;
+        gap: 1rem;
+    }
+    
+    /* Første række: Burger menu (venstre) og Cart (højre) */
     .burger-menu {
         display: flex;
+        position: static;
+        order: 1;
+        flex-shrink: 0;
     }
     
-    .search-bar {
-        max-width: 400px;
+    .cart-icon {
+        position: static;
+        order: 2;
+        flex-shrink: 0;
     }
     
     .cart-icon img {
-        width: 30px;
-        height: 30px;
+        width: 35px;
+        height: 35px;
     }
     
-    /* Navigation - skjult som standard på mobil */
+    /* Anden række: Logo centreret (fuld bredde) */
+    .logo {
+        position: static;
+        transform: none;
+        order: 3;
+        width: 100%;
+        text-align: center;
+        flex-basis: 100%;
+    }
+    
+    .logo a {
+        justify-content: center;
+    }
+    
+    .logo img {
+        height: 40px;
+    }
+    
+    /* Tredje række: Søgefelt (fuld bredde) */
+    .search-bar {
+        order: 4;
+        width: 100%;
+        max-width: 100%;
+        flex-basis: 100%;
+    }
+    
+    /* Navigation bliver burger menu */
     .main-nav {
         position: fixed;
         top: 0;
@@ -687,7 +838,6 @@ h1, h2, h3 {
         left: 0;
     }
     
-    /* Luk menu knap - synlig i mobil menu */
     .main-nav .close-menu-btn {
         display: block;
         position: absolute;
@@ -729,7 +879,7 @@ h1, h2, h3 {
         font-size: 2rem;
     }
     
-    /* Kategorier - stack ovenpå hinanden */
+    /* Kategorier */
     .categories {
         padding: 2rem 1rem;
     }
@@ -739,7 +889,7 @@ h1, h2, h3 {
         gap: 2rem;
     }
     
-    /* Inspiration artikler */
+    /* Inspiration */
     .inspiration {
         padding: 2rem 1rem;
     }
@@ -787,37 +937,29 @@ h1, h2, h3 {
         gap: 1rem;
         text-align: center;
     }
-}
-
-/* Ekstra small mobil - søgefelt under header */
-@media (max-width: 550px) {
-    .main-header {
-        padding: 1rem 1rem 1.5rem;
+    
+    /* Product Detail */
+    .product-detail-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
     
-    .header-container {
-        display: block;
-        position: relative;
-        padding-top: 3rem;
+    .image-circle {
+        width: 300px;
+        height: 300px;
     }
     
-    /* Første række: burger menu og cart */
-    .burger-menu {
-        position: absolute;
-        left: 0;
-        top: 0;
+    .thumbnail {
+        width: 60px;
+        height: 60px;
     }
     
-    .cart-icon {
-        position: absolute;
-        right: 0;
-        top: 0;
+    .product-info {
+        padding: 0;
     }
     
-    /* Anden række: søgefelt */
-    .search-bar {
-        width: 100%;
-        max-width: 100%;
-        position: relative;
+    .back-btn {
+        position: static;
+        margin-bottom: 2rem;
     }
 }
