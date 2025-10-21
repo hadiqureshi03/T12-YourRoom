@@ -35,7 +35,6 @@ h1, h2, h3 {
     position: relative;
 }
 
-/* Skjul logo for nu */
 .logo {
     display: none;
 }
@@ -116,6 +115,11 @@ h1, h2, h3 {
     margin-left: calc(-50vw + 50%);
     margin-top: 3rem;
     margin-bottom: 0;
+}
+
+/* Luk menu knap - skjult på desktop */
+.close-menu-btn {
+    display: none;
 }
 
 .main-nav ul {
@@ -213,6 +217,12 @@ h1, h2, h3 {
     color: #A84729;
 }
 
+.category-card p {
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
 /* Inspiration sektion styling */
 .inspiration {
     background-color: #ECB674;
@@ -270,6 +280,10 @@ h1, h2, h3 {
     cursor: pointer;
     border-radius: 4px;
     transition: opacity 0.3s;
+}
+
+.article-btn:hover {
+    opacity: 0.8;
 }
 
 /* Footer styling */
@@ -671,6 +685,21 @@ h1, h2, h3 {
     
     .main-nav.active {
         left: 0;
+    }
+    
+    /* Luk menu knap - synlig i mobil menu */
+    .main-nav .close-menu-btn {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: none;
+        border: none;
+        color: #FBF4E7;
+        font-size: 2.5rem;
+        cursor: pointer;
+        padding: 0;
+        line-height: 1;
     }
     
     .main-nav ul {

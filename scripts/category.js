@@ -13,10 +13,9 @@ async function fetchProductsByCategory(category) {
 // Funktion til at vise produkter på siden
 function displayProducts(products) {
     const productsGrid = document.getElementById('products-grid');
-    productsGrid.innerHTML = ''; // Ryd dummy produkter
+    productsGrid.innerHTML = ''; 
     
     products.forEach(product => {
-        // Lav produkt card
         const productCard = document.createElement('div');
         productCard.className = 'product-card';
         
