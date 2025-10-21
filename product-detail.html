@@ -21,7 +21,9 @@
             
             <!-- Logo -->
             <div class="logo">
-                <a href="index.html">HOME</a>
+                <a href="index.html">
+                    <img src="assets/images/logo.JPEG" alt="Your Room Logo">
+                </a>
             </div>
             
             <!-- Søgefelt -->
@@ -39,6 +41,11 @@
         
         <!-- Navigation menu -->
         <nav class="main-nav">
+            <!-- Luk knap -->
+            <button class="close-menu-btn" onclick="document.querySelector('.burger-menu').click()">
+                <span>&times;</span>
+            </button>
+            
             <ul>
                 <li><a href="index.html">INSPIRATION</a></li>
                 <li><a href="livingroom.html">LIVING ROOM</a></li>
@@ -57,10 +64,12 @@
         </button>
         
         <div class="product-detail-container">
+            <!-- Venstre side - Billeder -->
             <div class="product-images">
                 <!-- Hovedbillede -->
                 <div class="main-image">
                     <div class="image-circle">
+                        <!-- Billede indsættes via JavaScript -->
                     </div>
                 </div>
                 
@@ -70,6 +79,7 @@
                         <span>&#8249;</span>
                     </button>
                     <div class="thumbnails">
+                        <!-- Thumbnails indsættes via JavaScript -->
                     </div>
                     <button class="thumbnail-btn next" aria-label="Næste billede">
                         <span>&#8250;</span>
@@ -88,7 +98,10 @@
                 
                 <p class="product-price-detail" id="product-price">0,00 kr</p>
                 
-                <button class="buy-btn">Buy</button>
+                <div class="product-actions">
+                    <button class="buy-btn">Buy</button>
+                    <a href="review.html" class="review-link-btn">Write a Review</a>
+                </div>
             </div>
         </div>
     </section>
