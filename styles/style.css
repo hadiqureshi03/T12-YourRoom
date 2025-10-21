@@ -466,6 +466,34 @@ h1, h2, h3 {
 .product-detail {
     padding: 4rem 2rem;
     background-color: #FBF4E7;
+    position: relative;
+}
+
+/* Tilbage knap */
+.back-btn {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    background-color: #595C42;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: opacity 0.3s;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.back-btn:hover {
+    opacity: 0.8;
+}
+
+.back-btn span {
+    font-size: 1.2rem;
 }
 
 .product-detail-container {
